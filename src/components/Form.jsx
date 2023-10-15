@@ -18,6 +18,7 @@ const Form = ({ onAddItems }) => {
       id: Date.now(),
     };
 
+    //Add the new item to the list
     onAddItems(newItem);
 
     //Clear the form data
