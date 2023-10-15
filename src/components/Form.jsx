@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = ({ onAddItems }) => {
   const [quantity, setQuantity] = useState(1);
   const [description, setDescription] = useState('');
 
@@ -18,7 +18,7 @@ const Form = () => {
       id: Date.now(),
     };
 
-    console.log({ newItem });
+    onAddItems(newItem);
 
     //Clear the form data
     setQuantity(1);
