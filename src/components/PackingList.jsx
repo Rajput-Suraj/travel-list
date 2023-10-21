@@ -8,12 +8,17 @@ import Item from './Item';
 //   { id: 3, description: 'Charger', quantity: 1, packed: false },
 // ];
 
-const PackingList = ({ items, onDeleteItem }) => {
+const PackingList = ({ items, onDeleteItem, onToggleItems }) => {
   return (
     <div className="list">
       <ul>
         {items.map((item) => (
-          <Item key={item.id} item={item} onDeleteItem={onDeleteItem} />
+          <Item
+            key={item.id}
+            item={item}
+            onDeleteItem={onDeleteItem}
+            onToggleItems={onToggleItems}
+          />
         ))}
       </ul>
     </div>
