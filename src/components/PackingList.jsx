@@ -8,7 +8,7 @@ import Item from './Item';
 //   { id: 3, description: 'Charger', quantity: 1, packed: false },
 // ];
 
-const PackingList = ({ items, onDeleteItem, onToggleItems }) => {
+const PackingList = ({ items, onDeleteItem, onToggleItems, onClearList }) => {
   const [sortBy, setSortBy] = useState('input');
 
   let sortedItems;
@@ -38,6 +38,7 @@ const PackingList = ({ items, onDeleteItem, onToggleItems }) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packaged status</option>
         </select>
+        <button onClick={onClearList}>Clear list</button>
       </div>
     </div>
   );
